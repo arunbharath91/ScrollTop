@@ -1,0 +1,11 @@
+*[data-scroll-top]{
+position:fixed;
+bottom:20px;
+right:15px;
+padding:15px;
+background-color:blue;
+transition:  opacity 0.5s linear;
+-moz-transition:  opacity 0.5s linear;
+-webkit-transition: opacity 0.5s linear;
+-o-transition: opacity 0.5s linear;
+}

@@ -12,6 +12,10 @@ class Scroll {
       this.scrollVisibility();
     });
 
+    window.addEventListener('load', () => {
+      this.scrollVisibility();
+    });
+
     // this function for scroll to top
     this.element.addEventListener('click', (e: { preventDefault: () => void; }) => {
       e.preventDefault();
