@@ -1,12 +1,14 @@
 
-class Scroll {
-  private element: HTMLElement;
-  constructor(selector = "[data-scroll-top]") {
-    this.element = document.querySelector(selector) as HTMLElement;
-    this.registerEvents();
+export class Scroll {
+  private element!: HTMLElement;
+  private visibility: number = screen.height;
+  constructor() {
+
   }
 
-  registerEvents() {
+  add(selector = "[data-scroll-top]", visibility?: number) {
+    (visibility) ? this.visibility = visibility : null;
+    this.element = document.querySelector(selector) as HTMLElement;
     //calls this function to scroll the page
     window.addEventListener('scroll', () => {
       this.scrollVisibility();
@@ -25,7 +27,7 @@ class Scroll {
 
   // grab elements as array, rather than as NodeList
   scrollVisibility() {
-    if (window.pageYOffset < screen.height) {
+    if (window.pageYOffset < this.visibility) {
       this.element.style.visibility = 'hidden';
       this.element.style.opacity = '0';
     } else {
@@ -45,5 +47,3 @@ class Scroll {
       }, 15);
   }
 }
-
-const newScroll = new Scroll();

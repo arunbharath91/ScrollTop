@@ -1,2 +1,2 @@
 import '../style.scss';
-import "./scroll";
+import "./scroll-config";
