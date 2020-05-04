@@ -1,11 +1,28 @@
-.scrolltoTop{
-position:fixed;
-bottom:20px;
-right:15px;
-padding:15px;
-background-color:blue;
-transition:  opacity 0.5s linear;
--moz-transition:  opacity 0.5s linear;
--webkit-transition: opacity 0.5s linear;
--o-transition: opacity 0.5s linear;
+#toTop {
+    cursor: pointer;
+    border-radius: 32px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+    display: none;
+    text-decoration: none;
+    position: fixed;
+    bottom: 60px;
+    right: 2%;
+    z-index: 999;
+    border: none;
+    text-indent: 100%;
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s
+}
+
+#toTopHover {
+  overflow: hidden;
+  width: 32px;
+  height: 32px;
+    display: block;
+    float: right;
+    opacity: 0;
+    -moz-opacity: 0;
 }

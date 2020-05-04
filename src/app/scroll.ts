@@ -29,9 +29,11 @@ export class Scroll {
   scrollVisibility() {
     if (window.pageYOffset < this.visibility) {
       this.element.style.visibility = 'hidden';
+      this.element.style.display = 'none';
       this.element.style.opacity = '0';
     } else {
       this.element.style.visibility = 'visible';
+      this.element.style.display = 'block';
       this.element.style.opacity = '1';
     }
   }
