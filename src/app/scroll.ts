@@ -6,7 +6,7 @@ export class Scroll {
 
   }
 
-  add(selector = "[data-scroll-top]", visibility?: number) {
+  public add(selector = "[data-scroll-top]", visibility?: number) {
     (visibility) ? this.visibility = visibility : null;
     this.element = document.querySelector(selector) as HTMLElement;
     //calls this function to scroll the page
@@ -26,7 +26,7 @@ export class Scroll {
   }
 
   // grab elements as array, rather than as NodeList
-  scrollVisibility() {
+  private scrollVisibility() {
     if (window.pageYOffset < this.visibility) {
       this.element.style.visibility = 'hidden';
       this.element.style.display = 'none';
@@ -39,7 +39,7 @@ export class Scroll {
   }
 
 
-  scrollToTop(scrollDuration: number) {
+  private scrollToTop(scrollDuration: number) {
     const scrollStep = -window.scrollY / (scrollDuration / 15),
       scrollInterval = setInterval(() => {
         if (window.scrollY != 0) {
